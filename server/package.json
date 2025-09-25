@@ -1,0 +1,33 @@
+{
+  "name": "climatelens-server",
+  "version": "1.0.0",
+  "description": "Backend server for ClimateLens",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "init-db": "node initDB.js",
+    "check-db": "node checkDB.js",
+    "setup-env": "node setup-env.js",
+    "test-atlas": "node test-atlas-connection.js",
+    "validate": "node validate-config.js",
+    "diagnose": "node diagnose-mongodb.js",
+    "setup": "npm run setup-env && npm run validate && npm run test-atlas && npm run init-db",
+    "health": "curl http://localhost:5000/api/health || echo 'Server not running'"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.2.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.20.0",
+    "mongoose": "^7.5.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
