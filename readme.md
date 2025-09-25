@@ -1,7 +1,16 @@
 
 # ClimateLens 🌍
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen)](https://nodejs.org/)
+[![React Version](https://img.shields.io/badge/react-%5E18.0.0-blue)](https://reactjs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green)](https://www.mongodb.com/atlas)
+[![AI Powered](https://img.shields.io/badge/AI-Google%20Gemini-orange)](https://ai.google.dev/)
+[![Climate Action](https://img.shields.io/badge/Climate-Action-brightgreen)](https://sdgs.un.org/goals/goal13)
+
 A comprehensive climate awareness platform that educates users about climate issues through AI-generated stories, interactive maps, and real-time weather data.
+
+> **Making climate education accessible to everyone through the power of AI storytelling** 🌱
 
 ## 🌟 Features
 
