@@ -179,6 +179,18 @@ This project is licensed under the MIT License.
 
 ---
 
+## 👥 Developers
+
+This project was developed by:
+
+### **Core Developers**
+- **Jagarnath Mali** 🎯
+- **Prashant Chandra Kushwaha** 🚀
+
+*Thank you for your dedication to climate awareness and education!*
+
+---
+
 ## 👐 Contributing
 Contributions are welcome!
 1. Fork the repo
