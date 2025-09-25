@@ -1,0 +1,225 @@
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.8rem;
+}
+
+.app-header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+}
+
+.map-container {
+  flex: 2;
+  position: relative;
+}
+
+.sidebar {
+  flex: 1;
+  background: #f8f9fa;
+  overflow-y: auto;
+  border-left: 1px solid #dee2e6;
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    flex-direction: column;
+  }
+  
+  .map-container {
+    height: 50vh;
+  }
+  
+  .sidebar {
+    flex: none;
+    height: 50vh;
+  }
+}
+
+/* ===== MAP PAGE ===== */
+.map-page {
+  height: 100vh;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: relative;
+}
+
+.map-page .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.map-header {
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 20px;
+}
+
+.map-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.map-header nav ul.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  z-index: 2;
+}
+
+.map-header nav ul.menu li a,
+.map-header nav ul.menu li .nav-btn {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.map-header nav ul.menu li a:hover,
+.map-header nav ul.menu li a.active,
+.map-header nav ul.menu li .nav-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.map-header .search-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.map-header .location-search {
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(5px);
+  font-size: 14px;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+.map-header .location-search::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.map-header .location-search:focus {
+  outline: none;
+  border-color: #0b6d63;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 2px rgba(11, 109, 99, 0.3);
+}
+
+.map-header .search-btn {
+  padding: 8px 12px;
+  background: #0b6d63;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 14px;
+}
+
+.map-header .search-btn:hover {
+  background: #09564e;
+}
+
+.map-header .user-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 2;
+}
+
+.map-header .user-section span {
+  font-weight: 500;
+}
+
+.map-header .logout-btn {
+  padding: 8px 16px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.map-header .logout-btn:hover {
+  background: #c0392b;
+}
+
+.map-main {
+  flex: 1;
+  display: flex;
+  z-index: 2;
+}
+
+.map-main .map-container {
+  flex: 2;
+  height: calc(100vh - 80px);
+}
+
+.map-main .sidebar {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  overflow-y: auto;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.story-text {
+  color: white !important;           /* Dark text for visibility */
+  background:black !important;      /* White background */
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  opacity: 1 !important;            /* Ensure fully opaque */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}

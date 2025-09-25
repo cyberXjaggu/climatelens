@@ -1,0 +1,255 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== OTP PAGE ===== */
+.otp-page {
+  height: 100vh;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: white;
+  position: relative;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* ===== HEADER ===== */
+.otp-header {
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 20px;
+}
+
+.otp-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  z-index: 2;
+}
+
+/* ===== NAV MENU ===== */
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  z-index: 2;
+}
+
+nav ul.menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+nav ul.menu li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== MAIN CONTENT ===== */
+.otp-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  z-index: 2;
+}
+
+/* ===== OTP CONTAINER ===== */
+.otp-container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.otp-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.otp-subtitle {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.otp-subtitle strong {
+  color: #0b6d63;
+}
+
+/* ===== FORM ===== */
+.otp-form {
+  margin-bottom: 25px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: normal;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #0b6d63;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 2px rgba(11, 109, 99, 0.3);
+}
+
+/* ===== OTP BUTTON ===== */
+.otp-btn {
+  width: 100%;
+  padding: 15px;
+  background: #0b6d63;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.otp-btn:hover:not(:disabled) {
+  background: #09564e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(11, 109, 99, 0.4);
+}
+
+.otp-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ===== OTP LINKS ===== */
+.otp-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.resend-btn,
+.back-btn {
+  background: none;
+  border: none;
+  color: #0b6d63;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  padding: 5px;
+}
+
+.resend-btn:hover,
+.back-btn:hover {
+  color: #09564e;
+  text-decoration: underline;
+}
+
+.separator {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
+/* ===== FOOTER ===== */
+.otp-footer {
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #ddd;
+  backdrop-filter: blur(5px);
+  z-index: 2;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .otp-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  nav ul.menu {
+    gap: 15px;
+  }
+  
+  .otp-container {
+    padding: 30px 25px;
+    margin: 20px;
+  }
+  
+  .otp-title {
+    font-size: 1.6rem;
+  }
+  
+  .otp-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .input-group input {
+    font-size: 20px;
+    letter-spacing: 6px;
+    padding: 18px;
+  }
+}
