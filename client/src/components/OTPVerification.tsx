@@ -16,7 +16,7 @@ const OTPVerification: React.FC<OTPProps> = ({ email, onVerified, onBack }) => {
     setLoading(true);
     
     try {
-      const response = await fetch('http://localhost:5000/api/auth/verify-otp', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/auth/verify-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, otp })
@@ -36,7 +36,7 @@ const OTPVerification: React.FC<OTPProps> = ({ email, onVerified, onBack }) => {
 
   const resendOTP = async () => {
     try {
-      await fetch('http://localhost:5000/api/auth/send-otp', {
+      await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/auth/send-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })

@@ -13,7 +13,7 @@ const ForgotPassword: React.FC<ForgotPasswordProps> = ({ onBack }) => {
   const sendOTP = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/auth/send-otp', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/auth/send-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
@@ -32,7 +32,7 @@ const ForgotPassword: React.FC<ForgotPasswordProps> = ({ onBack }) => {
   const resetPassword = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/auth/reset-password', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/auth/reset-password`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, newPassword })

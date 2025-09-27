@@ -36,7 +36,7 @@ const Map: React.FC = () => {
 
   const fetchStories = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/stories');
+      const response = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/stories`);
       const data = await response.json();
       setStories(data);
     } catch (error) {

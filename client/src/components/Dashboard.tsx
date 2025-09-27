@@ -27,7 +27,7 @@ const Dashboard: React.FC<DashboardProps> = ({ user, token, onClose }) => {
 
   const fetchProfile = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/user/profile', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/user/profile`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await response.json();
@@ -39,7 +39,7 @@ const Dashboard: React.FC<DashboardProps> = ({ user, token, onClose }) => {
 
   const fetchStories = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/stories', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/stories`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await response.json();
@@ -51,7 +51,7 @@ const Dashboard: React.FC<DashboardProps> = ({ user, token, onClose }) => {
 
   const fetchNotifications = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/notifications', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/notifications`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await response.json();
@@ -70,7 +70,7 @@ const Dashboard: React.FC<DashboardProps> = ({ user, token, onClose }) => {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/user/change-password', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/user/change-password`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ const Dashboard: React.FC<DashboardProps> = ({ user, token, onClose }) => {
 
   const markNotificationAsRead = async (notificationId: string) => {
     try {
-      await fetch(`http://localhost:5000/api/notifications/${notificationId}/read`, {
+      await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/notifications/${notificationId}/read`, {
         method: 'PUT',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -110,7 +110,7 @@ const Dashboard: React.FC<DashboardProps> = ({ user, token, onClose }) => {
   const updateProfile = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/user/profile', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/user/profile`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
